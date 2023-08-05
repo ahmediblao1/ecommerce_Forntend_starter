@@ -1,0 +1,104 @@
+/*global */
+* {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  padding: 0 90px;
+  margin: 10px auto;
+}
+
+/* Header  */
+
+.menu{
+  gap: 10px;
+
+}
+.bar{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.home{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* sign up page */
+/* Styling for the father container */
+.father {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* Light gray background */
+  font-family: 'Verdana', sans-serif; /* Playful font */
+}
+
+/* Styling for the form inside the father container */
+.father form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+}
+
+/* Styling for the input fields */
+.father form input {
+  padding: 10px;
+  border: 2px solid #d3d3d3; /* Light gray border */
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  background-color: #ffffff; /* Light gray input background */
+}
+
+.father form label {
+  margin-bottom: 5px;
+}
+
+/* Styling for the submit button */
+.father form button,
+.register-nav {
+  padding: 10px 20px;
+  background-color: #5294f7; /* Green submit button */
+  border: none;
+  border-radius: 5px;
+  color: #fff; /* White text color */
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 2px solid white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* On hover, change the background color of the submit button */
+.father form button:hover,
+.register-nav:hover {
+  background-color: #ffffff; /* Slightly darker green on hover */
+  border: 2px solid #5294f7;
+  color: #5294f7;
+}
+
+
+/* Styling for the error message */
+.error-message {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: red; /* Red color for the error message */
+  font-size: 14px;
+}

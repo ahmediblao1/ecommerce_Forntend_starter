@@ -20,6 +20,7 @@ function App() {
     <Route path='/' element ={<Home />} />
     <Route path="/home" element={<Home />} />
     <Route path='/Dashboard' element = {<Dashboard />} >
+      <Route path='users' element ={<Users />} />
      </Route>
    </Routes>
    </div>

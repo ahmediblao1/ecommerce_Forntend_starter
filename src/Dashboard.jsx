@@ -1,12 +1,16 @@
+import { Outlet } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Topbar from "./components/topbar";
 export default function Dashboard(){
     return(
-        <div>
+        <div className="dash">
             <Topbar />
             <div className="content-flex">
             <Sidebar />
-            <h1>test</h1>
+            <div style={{width:"80%"}}>
+            <Outlet />
+
+            </div>
             </div>
         </div>
     )

@@ -9,7 +9,7 @@ body {
 
 .container {
   padding: 0 90px;
-  margin: 10px auto;
+  margin: 0px auto;
 }
 
 /* Header  */
@@ -102,3 +102,5 @@ body {
   color: red; /* Red color for the error message */
   font-size: 14px;
 }
+
+

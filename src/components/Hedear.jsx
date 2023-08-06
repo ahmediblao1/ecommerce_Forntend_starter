@@ -11,6 +11,8 @@ import { Link } from "react-router-dom"
             <div className="d-flex menu">
             <Link to={"/Home"} className="bar">Home</Link>
             <Link to={"/About"} className="bar" >About</Link>
+            <Link to={"/Dashboard"} className="bar" >Dashboard</Link>
+
             </div>
             <div className="d-flex">
             { !window.localStorage.getItem("email") ? (

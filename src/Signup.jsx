@@ -2,6 +2,7 @@
  import { useState } from "react"
 import "./index.css"
 import axios from "axios"
+import Hedear from "./components/Hedear"
  export default function Signup(){
 const [name,setname] = useState('')
 const [email,setemail] = useState('')
@@ -43,6 +44,8 @@ async function submit(e) {
   }
   
     return(
+      <>
+      <Hedear />
         <div className="father">
             <form onSubmit={submit}>
                 <label htmlFor="name">Name </label>
@@ -62,5 +65,6 @@ async function submit(e) {
                 </div>
             </form>
         </div>
+        </>
     )
  }

@@ -2,6 +2,7 @@
 import { useState } from "react"
 import "./index.css"
 import axios from "axios"
+import Hedear from './components/Hedear';
 
 
 export default function Login(){
@@ -41,6 +42,9 @@ async function submit(e) {
     }
   }
     return(
+      <>
+              <Hedear />
+
         <div className="father">
             <form onSubmit={submit}>
             <label htmlFor="email">Email </label>
@@ -54,4 +58,5 @@ async function submit(e) {
                 </div>
             </form>
         </div>
+        </>
     )}

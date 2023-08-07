@@ -12,8 +12,8 @@ export default function Users(){
     }, [])
 
 const showusers = users.map((user,index) =>
- <tr>
-    <td>{index}</td>
+ <tr key={index}>
+    <td>{index+1}</td>
     <td>{user.name}</td> 
     <td>{user.email}</td> 
  </tr>)

@@ -9,6 +9,7 @@ export default function Users(){
         fetch('http://127.0.0.1:8000/api/user/show')
         .then((res) => res.json())
         .then((data) => setusers(data))
+        .catch(error => console.log(error))
     }, [])
 
 const showusers = users.map((user,index) =>

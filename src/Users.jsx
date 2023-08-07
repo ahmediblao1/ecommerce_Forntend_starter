@@ -1,4 +1,23 @@
+/* eslint-disable react/jsx-key */
+/* eslint-disable no-unused-vars */
+import { useEffect, useState } from "react"
+
 export default function Users(){
+    const [users,setusers] = useState([])
+
+    useEffect(() =>{
+        fetch('http://127.0.0.1:8000/api/user/show')
+        .then((res) => res.json())
+        .then((data) => setusers(data))
+    }, [])
+
+const showusers = users.map((user,index) =>
+ <tr>
+    <td>{index}</td>
+    <td>{user.name}</td> 
+    <td>{user.email}</td> 
+ </tr>)
+
     return(
     <div style={{padding:"20px"}}>
             <table>
@@ -8,11 +27,8 @@ export default function Users(){
                     <th>Email</th>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>01</td>
-                        <td>ahmed</td>
-                        <td>ahmediblao@gmail.com</td>
-                    </tr>
+                        
+                {showusers}
                 </tbody>
             </table>
         </div>

@@ -3,6 +3,7 @@
 
 import axios from "axios"
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 export default function Users(){
 const [users,setuusers] = useState([])
@@ -24,11 +25,14 @@ const showusers = users.map((user,index) =>
     <td>{user.name}</td>
     <td>{user.email}</td>
     <td>
+    <Link to={`${user.id}`} >
     <i
-    onClick={() => deleteuser(user.id)}
     style={{color:"dark", fontSize:'20px', paddingRight:"5px"}}
     className="fa-solid fa-pen-to-square"></i>
+    </Link>
+
     <i
+    onClick={() => deleteuser(user.id)}
     style={{color:"red", fontSize:'20px',cursor:"pointer"}}
     className="fa-solid fa-trash"></i>
     </td>

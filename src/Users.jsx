@@ -4,20 +4,19 @@ import { useEffect, useState } from "react"
 
 export default function Users(){
     const [users,setusers] = useState([])
-
-    useEffect(() =>{
-        fetch('http://127.0.0.1:8000/api/user/show')
-        .then((res) => res.json())
-        .then((data) => setusers(data))
-        .catch(error => console.log(error))
-    }, [])
+useEffect(() => {
+    fetch("http://127.0.0.1:8000/api/user/show")
+    .then((res) => res.json())
+    .then((data) => setusers(data))
+})
 
 const showusers = users.map((user,index) =>
- <tr key={index}>
-    <td>{index+1}</td>
-    <td>{user.name}</td> 
-    <td>{user.email}</td> 
- </tr>)
+<tr key={index}>
+<td>{index + 1}</td>
+<td>{user.name}</td>
+<td>{user.email}</td>
+</tr> )
+
 
     return(
     <div style={{padding:"20px"}}>
@@ -28,7 +27,6 @@ const showusers = users.map((user,index) =>
                     <th>Email</th>
                 </thead>
                 <tbody>
-                        
                 {showusers}
                 </tbody>
             </table>

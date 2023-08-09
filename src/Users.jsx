@@ -8,8 +8,6 @@ import { Link } from "react-router-dom"
 export default function Users(){
 const [users,setuusers] = useState([])
 const [runuseeffect,setrun] = useState(0)
-// state when delete user
-
 
 
 useEffect(() => {

@@ -13,7 +13,7 @@ const [runuseeffect,setrun] = useState(0)
 useEffect(() => {
     fetch("http://127.0.0.1:8000/api/user/show")
     .then((res) => res.json())
-    .then((data) => setuusers(data) )s
+    .then((data) => setuusers(data) )
 },[runuseeffect]) // run useeffect when deleting user
 
 // delete function

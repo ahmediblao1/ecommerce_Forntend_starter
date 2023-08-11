@@ -9,6 +9,7 @@ import Login from './Login';
 import Home from './Home';
 import Dashboard from './Dashboard';
 import Users from './Users';
+import EditUser from './EditUser';
 
 function App() {
 
@@ -20,7 +21,9 @@ function App() {
     <Route path='/' element ={<Home />} />
     <Route path="/home" element={<Home />} />
     <Route path='/Dashboard' element = {<Dashboard />} >
-      <Route path='users' element ={<Users />} />
+      <Route path='users' element ={<Users />} >
+      <Route path=':id' element ={<EditUser />} />
+       </Route>
     </Route>
    </Routes>
    </div>

@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Hedear from "./components/Hedear"
 import axios from "axios";
 
 export default function EditUser() {
@@ -46,7 +47,6 @@ export default function EditUser() {
       
         return(
           <>
-          <Hedear />
             <div className="father">
                 <form onSubmit={submit}>
 <label htmlFor="name">Name </label>
@@ -62,7 +62,7 @@ export default function EditUser() {
 {rpassword !== password && accept && <p className="error-message">Password dont match </p>}
 <input id="rpassword" type="password" placeholder="Confirm your password" value={rpassword} onChange={(e) =>setrpassword(e.target.value)}></input>
   <div style={{textAlign:"center"}}>
-     <button className="register-btn" type="submit" >Register</button>
+     <button className="register-btn" type="submit" >Update</button>
                     </div>
                 </form>
             </div>

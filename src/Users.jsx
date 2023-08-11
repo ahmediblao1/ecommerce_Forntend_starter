@@ -14,7 +14,7 @@ useEffect(() => {
     fetch("http://127.0.0.1:8000/api/user/show")
     .then((res) => res.json())
     .then((data) => setuusers(data) )
-},[runuseeffect]) // run useeffect when deleting user
+},[runuseeffect]) 
 
 // delete function
 async function deleteuser(id){
@@ -47,9 +47,6 @@ const showusers = users.map((user,index) =>
     className="fa-solid fa-trash"></i>
     </td>
 </tr>)
-
-
-
 
     return(
     <div style={{padding:"20px"}}>

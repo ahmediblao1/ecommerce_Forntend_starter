@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-undef */
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useFetcher, useParams } from "react-router-dom";
 import Hedear from "./components/Hedear"
 import axios from "axios";
 
@@ -12,10 +12,23 @@ export default function EditUser() {
     const [rpassword,setrpassword] = useState('')
     const [accept,setaccept] = useState(false)
     const [emailError,setemailError] =useState("")
+
+const id = window.location.pathname.split("/").slice(-1)[0]
+useEffect(() => {
+    fetch(`http://127.0.0.1:8000/api/user/showbyid/${id}`)
+    .then((res) => res.json())
+    .then((data) => { 
+        // Two Ways
+        setname(data.map((info) => info.name)) 
+        setemail(data[0].email)
+
+    })
+},[])
+ 
+ 
     
     async function submit(e) {
         e.preventDefault();
-      
         let flag = true;
       setaccept(true)
         if (name.trim() === "" || password.length < 8 || rpassword !== password) {

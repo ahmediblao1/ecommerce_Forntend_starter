@@ -18,7 +18,7 @@ useEffect(() => {
     fetch(`http://127.0.0.1:8000/api/user/showbyid/${id}`)
     .then((res) => res.json())
     .then((data) => { 
-        // Two Ways
+        // Two Ways to get the values
         setname(data.map((info) => info.name)) 
         setemail(data[0].email)
 

@@ -16,8 +16,7 @@ useEffect(() => {
     .then((data) => setuusers(data) )
 },[runuseeffect]) 
 
-// useEffect(() => {
-//     fetch("http://127.0.0.1:8000/api/user/showbyid/16")
+
 
 
 

@@ -11,7 +11,6 @@ export default function EditUser() {
     const [password,setpassword] = useState('')
     const [rpassword,setrpassword] = useState('')
     const [accept,setaccept] = useState(false)
-    const [emailError,setemailError] =useState("")
 
 const id = window.location.pathname.split("/").slice(-1)[0]
 useEffect(() => {
@@ -40,7 +39,7 @@ useEffect(() => {
         try {
           if (flag) {
             // send the data
-            let res = await axios.post("http://127.0.0.1:8000/api/register", {
+            let res = await axios.post(`http://127.0.0.1:8000/api/user/update/${id}`, {
               name: name,
               email: email,
               password: password,
@@ -48,13 +47,13 @@ useEffect(() => {
             });
             if(res.status === 200){
                 window.localStorage.setItem("email",email)
-                window.location.pathname ='/'
+                window.location.pathname ='/dashboard/users'
             }
       
         
           }
         } catch (err) {
-          setemailError(err.response.status);
+          console.log(err)
         }
       }
       
@@ -66,7 +65,6 @@ useEffect(() => {
  {name === '' && accept && <p className="error-message">User name is required</p>}
   <input id="name" type="text" placeholder="Enter your name" value={name} onChange={(e) =>setname(e.target.value)}></input>
 <label htmlFor="email">Email </label>
- {accept && emailError === 422 && <p className="error-message">The email has already been taken</p>}
   <input id="email" type="email" placeholder="Enter your email" required value={email} onChange={(e) =>setemail(e.target.value)}></input>
   <label htmlFor="password">Password </label>
  {password.length < 8 && accept && <p className="error-message">Password should be more the 8 char</p>}

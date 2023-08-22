@@ -11,7 +11,11 @@ import Form from "./components/Form"
       <>
       <Hedear />
         <div className="father">
-            <Form button = "Register" endPoint = "register" />
+            <Form button = "Register"
+             endPoint = "register"
+             navigate = "/"
+
+              />
         </div>
         </>
     )

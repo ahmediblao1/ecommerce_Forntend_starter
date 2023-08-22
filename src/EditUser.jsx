@@ -23,43 +23,16 @@ useEffect(() => {
     })
 },[])
  
- 
-    
-    // async function submit(e) {
-    //     e.preventDefault();
-    //     let flag = true;
-    //   setaccept(true)
-    //     if (name.trim() === "" || password.length < 8 || rpassword !== password) {
-    //       flag = false;
-    //     } else {
-    //       flag = true;
-    //     }
-      
-    //     try {
-    //       if (flag) {
-    //         // send the data
-    //         let res = await axios.post(`http://127.0.0.1:8000/api/user/update/${id}`, {
-    //           name: name,
-    //           email: email,
-    //           password: password,
-    //           password_confirmation: rpassword,
-    //         });
-    //         if(res.status === 200){
-    //             window.localStorage.setItem("email",email)
-    //             window.location.pathname ='/dashboard/users'
-    //         }
-      
-        
-    //       }
-    //     } catch (err) {
-    //       console.log(err)
-    //     }
-    //   }
-      
         return(
           <>
             <div className="father">
-                <Form button = "Update" name = {name} email = {email} />
+                <Form
+                 button = "Update"
+                  name = {name} 
+                  email = {email} 
+                  endPoint = {`update/${id}`}
+                  navigate = "dashboard/users"
+                   />
             </div>
             </>
         )

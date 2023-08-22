@@ -30,7 +30,7 @@ async function submit(e) {
     try {
       if (flag) {
         // send the data
-        let res = await axios.post("http://127.0.0.1:8000/api/register", {
+        let res = await axios.post(`http://127.0.0.1:8000/api/${props.endPoint}`, {
           name: name,
           email: email,
           password: password,
@@ -38,7 +38,7 @@ async function submit(e) {
         });
         if(res.status === 200){
             window.localStorage.setItem("email",email)
-            window.location.pathname ='/'
+            window.location.pathname =`/${props.navigate}`
         }
   
     

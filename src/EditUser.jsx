@@ -30,8 +30,9 @@ useEffect(() => {
                  button = "Update"
                   name = {name} 
                   email = {email} 
-                  endPoint = {`update/${id}`}
+                  endPoint = {`user/update/${id}`}
                   navigate = "dashboard/users"
+                  hasLocalStorage = {false}
                    />
             </div>
             </>

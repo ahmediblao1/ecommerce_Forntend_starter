@@ -37,8 +37,8 @@ async function submit(e) {
           password_confirmation: rpassword,
         });
         if(res.status === 200){
-            window.localStorage.setItem("email",email)
-            window.location.pathname =`/${props.navigate}`
+        props.hasLocalStorage && window.localStorage.setItem("email",email);
+        window.location.pathname =`/${props.navigate}`
         }
   
     

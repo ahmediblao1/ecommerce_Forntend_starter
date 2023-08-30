@@ -55,14 +55,7 @@ const showusers = users.map((user,index) =>
     return(
     <div style={{padding:"20px"}}>
             <table>
-                <thead>
-                    <tr>
-                    <th>ID</th>
-                   <th>User</th>
-                    <th>Email</th>
-                    <th>Action</th>
-                    </tr>
-                </thead>
+                
                 <tbody>
                     {showusers}
                 </tbody>

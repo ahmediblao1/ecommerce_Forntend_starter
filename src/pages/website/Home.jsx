@@ -1,4 +1,4 @@
-import Hedear from "./components/Hedear";
+import Hedear from "../../components/Hedear";
 
 export default function Home(){
     return(

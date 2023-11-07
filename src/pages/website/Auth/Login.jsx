@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react"
-import "./index.css"
+import "../../../index.css"
 import axios from "axios"
-import Hedear from './components/Hedear';
+import Hedear from '../../../components/Hedear';
 
 
 export default function Login(){

@@ -2,9 +2,9 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import { useFetcher, useParams } from "react-router-dom";
-import Hedear from "./components/Hedear"
+import Hedear from "../../../components/Hedear"
 import axios from "axios";
-import Form from "./components/Form";
+import Form from "../../../components/Form";
 
 export default function EditUser() {
     const [name,setname] = useState('')

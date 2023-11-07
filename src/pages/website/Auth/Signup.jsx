@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
-import "./index.css"
-import Hedear from "./components/Hedear"
-import Form from "./components/Form"
+import "../../../index.css"
+import Hedear from "../../../components/Hedear"
+import Form from "../../../components/Form"
  export default function Signup(){
 
 

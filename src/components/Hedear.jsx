@@ -7,11 +7,13 @@ import { Link } from "react-router-dom"
     }
     return(
         <div className="container">
-        <nav className="d-flex">
+        <nav className="d-flex shadow">
             <div className="d-flex menu">
             <Link to={"/Home"} className="bar">Home</Link>
-            <Link to={"/About"} className="bar" >About</Link>
+            <Link to={"/Home"} className="bar" >About</Link>
             <Link to={"/Dashboard"} className="bar" >Dashboard</Link>
+            <Link to={"/Example"} className="bar" >example</Link>
+
 
             </div>
             <div className="d-flex">

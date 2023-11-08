@@ -20,6 +20,7 @@ export default function Units(props){
             <h3 style={{ fontWeight:"normal"}}><i style={{color:"gold", }} className="fa-solid fa-star fa-fade"></i>{props.rating}</h3>
             </div>
             <h2 style={{color:"gray",marginTop:"0", fontWeight:"normal"}}>{props.desc}</h2>
+            <h4 >{props.price} <span style={{fontWeight:"normal", color:"gray"}}>night</span></h4>
         </div>
 
     )

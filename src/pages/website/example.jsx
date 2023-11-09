@@ -2,9 +2,11 @@ import { Link } from "react-router-dom";
 
 
 export default function Example() {
+    fetch("http://127.0.0.1:8000/api/user/show")
+    .then(res => res.json()).then(data => data.map(user => console.log(user.name)))
     return(
         <div style={{display:"flex" ,justifyContent:"center" , alignItems:"center", fontWeight:"bold"}}>
-            <p > hello welcome to my page </p>
+            
             <button><Link to={"/Home"}>go back</Link></button>
         </div>
     )

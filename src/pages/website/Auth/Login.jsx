@@ -34,6 +34,7 @@ async function submit(e) {
         if(res.status === 200){
             window.localStorage.setItem("email",email)
             window.location.pathname ='/'
+            console.log(res)
         }
 
       }

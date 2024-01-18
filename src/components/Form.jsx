@@ -53,7 +53,7 @@ async function submit(e) {
                 <label htmlFor="name">Name </label>
                 {name === '' && accept && <p className="error-message">User name is required</p>}
                 <input id="name" type="text" placeholder="Enter your name" value={name} onChange={(e) =>setname(e.target.value)}></input>
-                <label htmlFor="email">Email </label>
+                <label htmlFor="email">Email</label>
                 {accept && emailError === 422 && <p className="error-message">The email has already been taken</p>}
                 <input id="email" type="email" placeholder="Enter your email" required value={email} onChange={(e) =>setemail(e.target.value)}></input>
                 <label htmlFor="password">Password </label>

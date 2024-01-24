@@ -15,10 +15,6 @@ useEffect(() => {
     .then((data) => setuusers(data) )
 },[runuseeffect]) 
 
-
-
-
-
 // delete function
 async function deleteuser(id){
     try {

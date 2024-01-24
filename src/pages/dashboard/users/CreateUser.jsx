@@ -7,7 +7,6 @@ return(
                  endPoint = "user/create"                  
                   navigate = "dashboard/users"
                   button = "Create"
-
                    />
     </div>
 )

@@ -9,7 +9,6 @@ export default function Users(){
 const [users,setuusers] = useState([])
 const [runuseeffect,setrun] = useState(0)
 
-
 useEffect(() => {
     fetch("http://127.0.0.1:8000/api/user/show")
     .then((res) => res.json())

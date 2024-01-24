@@ -25,10 +25,7 @@ async function deleteuser(id){
     } catch (error) {
         console.error("Error deleting user:", error);
     }
-     
-
 }
- 
 const showusers = users.map((user,index) => 
 <tr key={index}>
     <td>{index + 1}</td>

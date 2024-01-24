@@ -9,7 +9,6 @@ import Form from "../../../components/Form";
 export default function EditUser() {
     const [name,setname] = useState('')
     const [email,setemail] = useState('')
-   
 const id = window.location.pathname.split("/").slice(-1)[0]
 useEffect(() => {
     fetch(`http://127.0.0.1:8000/api/user/showbyid/${id}`)
